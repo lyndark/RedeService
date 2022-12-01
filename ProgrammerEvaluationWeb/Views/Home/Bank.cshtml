@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Bank Page";
+}
+
+@model IEnumerable<ProgrammerEvaluationWeb.Dtos.BankDto>
+
+<div class="text-center">
+    <table class="table table-bordered  table-striped">
+        <tr>
+            <th>
+                ISPB
+            </th>
+            <th>
+                Código
+            </th>
+            <th>
+                Nome
+            </th>
+            <th>
+                Nome Completo
+            </th>
+        </tr>
+        <tr>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                        @item.ispb
+                </td>
+                <td>
+                        @item.code
+                </td>
+                <td>
+                        @item.name
+                </td>
+                <td>
+                        @item.fullName
+                </td>
+            </tr>
+            }
+        </tr>
+    </table>
+</div>

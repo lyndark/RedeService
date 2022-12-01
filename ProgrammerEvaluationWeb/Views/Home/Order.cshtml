@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Ordenador de Números</h1>
+    @using (Html.BeginForm("Order", "Home"))
+    {
+        <label>Digite os números a serem ordenados separados por vírgula: (Ex: 4,3,6,8,7,2,9,1)</label>
+        <div>
+            <input type="text" id="value" name="numbers" />
+            <input type="submit" value="ordenar" />
+        </div>
+    }
+
+    @if (ViewBag.Numbers != null)
+    {
+        <label>Números Ordenados: </label>
+        <div>
+            @foreach (var number in ViewBag.Numbers)
+            {
+                <span>@number</span>
+            }
+
+        </div>
+    }
+</div>

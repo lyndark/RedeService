@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model IEnumerable<ProgrammerEvaluationWeb.Models.clsTeste>
+
+<div class="text-center">
+    <table class="table table-bordered table-striped">
+        <tr>
+        <th>
+            Código
+        </th>
+        <th>
+            Descrição
+        </th>
+        </tr>
+        <tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @item.Codigo
+                    </td>
+                    <td>
+                        @item.Descricao
+                    </td>
+                </tr>
+            }
+        </tr>
+    </table>
+</div>
